@@ -49,8 +49,9 @@ body {
     z-index: 300;
     display: none;
     text-decoration: none;
-    color: #ffffff;
-    background-color: #ff9000;
+    color: #ffffff3f;
+    background-color: rgba(122, 93, 59, 0);
+    
 }
 
 .back-to-top i {
@@ -83,7 +84,7 @@ a.active {
 }
 
 a {
-    color: #058BCE;
+    color: #70ce05;
 }
 
 a:hover,
@@ -119,8 +120,8 @@ h6 {
 
 .btn-primary {
     color: #fff;
-    background-color: #058BCE;
-    border-color: #058BCE;
+    background-color: #05ce16;
+    border-color: #05ce48;
     font-family: "lato";
     text-transform: uppercase;
     font-weight: 700
@@ -132,8 +133,8 @@ h6 {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #fec503;
-    border-color: #f6bf01;
+    background-color: #00ff37;
+    border-color: #01f622;
 }
 
 .btn-primary:active,
@@ -158,12 +159,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
     background-color: #058BCE;
-    border-color: #058BCE;
+    border-color: #05ce52;
 }
 
 .btn-primary .badge {
     color: #058BCE;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
 }
 
 .btn-xl {
@@ -184,7 +185,7 @@ fieldset[disabled] .btn-primary.active {
 .open .dropdown-toggle.btn-xl {
     color: #fff;
     background-color: #48AAF1;
-    border-color: #48AAF1;
+    border-color: #4c48f1;
 }
 
 .btn-xl:active,
@@ -266,12 +267,12 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    background-color: transparent !important;
+    background-color: transparent #ff9000;
     border-bottom: 4px solid #058BCE;
 }
 
 .navbar-default .navbar-toggle {
-    background-color: #058BCE;
+    background-color: #0519ce;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -409,7 +410,7 @@ fieldset[disabled] .btn-xl.active {
 
 .intro-text {
     padding-bottom: 35px;
-    text-align: center;
+    text-align: left;
 }
 
 .intro-text .intro-lead-in {
@@ -439,7 +440,7 @@ fieldset[disabled] .btn-xl.active {
 
     .intro-text {
     padding-bottom: 35px;
-    text-align: center;
+    text-align: left;
 }
 }
 
@@ -1076,7 +1077,7 @@ section#portfolio {
     text-align: center;
     margin: 0 auto;
     color: #ffffff;
-    background: linear-gradient(to right, #7b4397, #dc2430);
+    background: linear-gradient(to right, #4a97430e, #dc2430);
     padding: 25% 0;
     height: 100%;
     width: 100%;
@@ -1300,7 +1301,7 @@ ul.filter li a:hover {
     height: 75px;
     width: 1px;
     margin-left: 35px;
-    background-color: #222;
+    background-color: rgb(34, 34, 34);
     transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -1324,7 +1325,7 @@ ul.filter li a:hover {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #fed136
+    background: #87d126
 }
 
 ::selection {
@@ -1348,7 +1349,7 @@ body {
 /* 9.0 ============  PRICING  = */
 
 #pricing {
-    background-color: #FEFEFE;
+    background-color: #4c48f1;
     padding-bottom: 120px;
 }
 
@@ -1420,15 +1421,15 @@ body {
 }
 
 .pricing a.btn-send:hover {
-    background-color: #48AAF1;
+    background-color: #220509;
 }
 
 .pricing ul li:nth-child(even) {
-    background: #E6E6E6;
+    background: #87d126;
 }
 
 .pricing-top-box {
-    background-color: #266DD1;
+    background-color: #87d126;
 }
 
 @media (max-width:1440px) {
@@ -1462,7 +1463,7 @@ body {
 }
 
 #clients {
-    background-color: #ebebeb;
+    background-color: #87d126;
     min-height: 210px;
     padding: 50px 0px;
 }
@@ -1568,12 +1569,12 @@ section#contact {
    box-shadow: none !important;
   margin-bottom: 0px !important;
 }
-}
 
 
-}
+
+
 section#contact .section-heading {
-    color: #fff !important;
+    color: rgb(255, 255, 255) !important;
 }
 section#contact .section-subheading {
     color: #fff !important;
@@ -1899,4 +1900,7 @@ ul.social-buttons li a:active {
     margin-bottom: 10px;
     float: left;
     width: 100%;
+}
+.useful-link{
+    padding-left: 35px;
 }
