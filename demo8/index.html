@@ -2,17 +2,26 @@
 <html lang="fi">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>demo8</title>
-    <script type="text/javascript"language="javascript"src="kirjautuminen.js"></script>
+    <script type="text/javascript" language="javascript" src="kirjautuminen.js"></script>
 </head>
-<body>
-<p id="tervetuloa_teksti">Tervetuloa! </p>
 
+<body>
+<p id="tervetulo_teksti">Tervetuloa! </p>
 <form id="kirjautumis_lomake">
     <input id="nimi" type="text" placeholder="Syötä nimesi" value="" />
-    <input id="kirjaudu_nappi" type="submit" value="Kirjaudu sisään" onclick="kirjaudu()" />
-    <input id="uloskirjautumis_nappi" type="submit" value="kirjaudu ulos" onclick="kirjauduulos()" />
+    <input id="kirjaudu_nappi" type="submit" value="Kirjaudu sisään" onClick="kirjaudu()" />
 </form>
+
+
+<form id="ulos_kirjautuminen">
+    <input id="uloskirjautuminen" type="submit" value="Kirjaudu ulos" onClick="Kirjaudu_ulos()" />
+   
+</form>
+
 </body>
+
 </html>
+
+
