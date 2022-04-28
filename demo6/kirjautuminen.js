@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", onkoKirjautunut);
 function onkoKirjautunut(){
     let kirjautunut = 'kylla';
     if(kirjautunut === 'kylla'){
-        document.getElementById('tervetuloa_teksti').textContent += ' Nele Toimiiko tämä nytten?';
+        document.getElementById('tervetuloa_teksti').textContent += ' Nele ';
     }
 }
