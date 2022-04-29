@@ -331,9 +331,10 @@ a:focus {
   padding: 25px;
   border-radius: 20px;
 }
-.submit{
+.submit input{
   background-color: #fec913;
   margin: 10px 2px;
+
 }
 .contact-form input {
   border: none;
