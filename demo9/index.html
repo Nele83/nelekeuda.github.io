@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 
 <head>
   <!-- Basic -->
@@ -34,25 +34,11 @@
 
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 
- <!-- header section -->
- <h5 id="tervetulo_teksti"> Tervetuloa! </h5>
- <section class="header_section">
-  
-  <form id="kirjautumis_lomake">
-    <input id="nimesi" placeholder="Syötä nimesi" value="" />
-    <input id="kirjaudu_nappi" type="submit" value="kirjaudu sisään" onclick="kirjaudu()"/>
-  </form>
-  <form id="ulos_kirjautuminen">
-    <input id="uloskirjautuminen" type="submit" value="kirjaudu ulos"onclick="kirjaudu_ulos()" />
-  </form>
- 
-</section>
-<!-- header section -->
-
-
 </head>
 
 <body>
+
+
   
   <div>
 
@@ -76,9 +62,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
-                </li>
+                
                 <li class="nav-item ">
                   <a class="nav-link" href="about.html"> About </a>
                 </li>
@@ -95,6 +79,21 @@
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
+                <li
+                   <!-- header section -->
+ <!--<h5 id="tervetulo_teksti"> Tervetuloa! </h5>-->
+ <section class="header_section">
+  
+  <form id="kirjautumis_lomake">
+    <input id="nimi" type="text" placeholder="Syötä nimesi" value="" />
+    <input id="kirjaudu_nappi" type="submit" value="kirjaudu sisään" onclick="kirjaudu()"/>
+  </form>
+
+  <form id="ulos_kirjautuminen">
+    <input id="uloskirjautuminen" type="submit" value="kirjaudu ulos"onclick="kirjaudu_ulos()" />
+  </form>
+</section></li>
+
 
               </ul>
              

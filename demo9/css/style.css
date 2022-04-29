@@ -22,7 +22,7 @@ body {
 }
 
 .layout_padding-bottom {
-  padding-bottom: 75px;
+  padding-bottom: 25px;
 }
 
 .call_to-btn {
@@ -69,20 +69,22 @@ body {
 /*header section*/
 
 .header_section {
-  padding-top: 16px;
-  text-align: right;
+  color: #fec913;
+  padding-top: 25px;
+  text-align: left;
   font-size: 16px;
+
 }
 
 nav.navbar.navbar-expand-lg {
 
-  padding: 10px 0;
+  padding: 25px 0;
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
-  padding: 10px 20px;
+  padding: 25px;
   color: #2d2c2c;
-  font-size: 15px;
+  font-size: 10px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -126,7 +128,7 @@ a:focus {
 }
 
 .top_container.sub_pages::before {
-  background-size: 400px 200px;
+  background-size: 200px 200px;
   background-position: top left;
 }
 
@@ -186,12 +188,12 @@ a:focus {
 /* hero section */
 .hero-container {
   display: flex;
-  padding-top: 50px;
-  padding-bottom: 75px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .hero_detail-box {
-  width: 45%;
+  width: 25%;
 }
 
 .hero_img-container {
@@ -329,7 +331,10 @@ a:focus {
   padding: 25px;
   border-radius: 20px;
 }
-
+.submit{
+  background-color: #fec913;
+  margin: 10px 2px;
+}
 .contact-form input {
   border: none;
   outline: none;

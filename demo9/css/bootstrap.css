@@ -27,7 +27,7 @@
   --light: #f8f9fa;
   --dark: #343a40;
   --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
+  --breakpoint-sm: 578px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
@@ -211,7 +211,7 @@ table {
 
 caption {
   padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-bottom:25px;
   color: #6c757d;
   text-align: left;
   caption-side: bottom;
@@ -4173,7 +4173,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
+  margin-right: -1rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
