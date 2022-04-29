@@ -155,6 +155,7 @@ a:focus {
   border: none;
 }
 
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -394,9 +395,9 @@ a:focus {
 }
 
 .admission_detail .admission_btn {
-  background-color: #fec913;
+  background-color: #557;
   padding: 7px 35px;
-  color: #fefeff;
+  color: yellow;
   font-size: 15px;
   border-radius: 5px;
 }
@@ -409,7 +410,7 @@ a:focus {
   margin: 15px 0;
 }
 
-.landing_section .number_heading {
+.landing_section .number_heading .header_section {
   color: #fec913;
 }
 

@@ -35,12 +35,15 @@
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 
  <!-- header section -->
- 
+ <h5 id="tervetulo_teksti"> Tervetuloa! </h5>
  <section class="header_section">
-  <p id="tervetulo_teksti"> Tervetuloa! </p>
+  
   <form id="kirjautumis_lomake">
     <input id="nimesi" placeholder="Syötä nimesi" value="" />
     <input id="kirjaudu_nappi" type="submit" value="kirjaudu sisään" onclick="kirjaudu()"/>
+  </form>
+  <form id="ulos_kirjautuminen">
+    <input id="uloskirjautuminen" type="submit" value="kirjaudu ulos"onclick="kirjaudu_ulos()" />
   </form>
  
 </section>
@@ -79,6 +82,7 @@
                 <li class="nav-item ">
                   <a class="nav-link" href="about.html"> About </a>
                 </li>
+               
 
                 <li class="nav-item ">
                   <a class="nav-link" href="teacher.html"> Teacher </a>
@@ -93,6 +97,7 @@
                 </li>
 
               </ul>
+             
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
               </form>
@@ -103,12 +108,13 @@
     <section class="hero_section ">
       <div class="hero-container container">
         <div class="hero_detail-box">
+        >
           <h3>
-            Welcome to <br>
-            Best educations
+            Tule opiskelemaan <br>
+            meille!
           </h3>
           <h1>
-            school
+           school 
           </h1>
           <p>
             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
