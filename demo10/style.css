@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -7,12 +8,12 @@ body{
     background-color: #f6f7f9;
     font-family: 'Muli', sans-serif;
     margin: 0;
-    display: flex;
+    display:flex;
     flex-direction: column;
     align-items: center; /*Tällä siirän index.html body h1 tekstit näytön keskelle yläriville */
     justify-content: center; /* Tällä siirän index.html body h1 tekstin keskelle näyttöä ja min-heightillä*/
     min-height: 100vh; /*Alan anettamaan mihin kohtaan tarkalleen haluan */
-    overflow: hidden;
+    overflow:hidden;
 }
 
 .container{
@@ -25,7 +26,7 @@ body{
     width:350px;
     justify-content: space-between;
     margin-bottom: 30px;
-    position: relative;
+    position:relative;
 }
 
 .progress-container::before{
@@ -41,19 +42,41 @@ body{
     transition: 0.4s ease;
 }
 
-
 .progress{
     background-color: #3498db;
-    position:absolute;
+    position: absolute;
     top:50%;
     left:0;
     transform: translateY(-50%);
-    height: 4px;
+    height:4px;
     width:0%;/*Tällä saa viivan näkyviin numeroiden välissä*/
     z-index: -1;
     transition: 0.4s ease;
 }
 
 .circle{
-    background-color:white;
+    background-color: white;
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:3px solid #e0e0e0;
+    transition: 0.4s ease;;   
 }
+
+.circle.active{
+    border-color:#3498db;
+}
+
+.btn{
+    font-family: inherit;
+    font-size:14px;
+    padding: 10px 30px;
+    background-color: #3498db;/*Next nappi muuttuu kokonaan siniseksi*/
+    color:#fff;/*Next napin tekstin väri muuttuu valkoiseksi*/
+    border:0;/*Tämä muuttaa Next napin reunat*/
+    border-radius: 6px;/*Tämä muuttaa Next napin reunat pyöreäksi */
+}
+
