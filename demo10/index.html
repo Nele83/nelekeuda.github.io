@@ -9,20 +9,21 @@
         <link rel="stylesheet" href="style.css"> <!--Linkki ulkoiseen tyylisivuun. REL-attribuuttia käytetään määrittämään linkitetyn
              tiedoston ja HTML-dokumentin välinen suhde . REL=StyleSheet määrittää pysyvän tai ensisijaisen tyylin, kun taas REL="Alternate 
              StyleSheet" määrittää vaihtoehtoisen tyylin. Pysyvä tyyli on sellainen, jota käytetään aina, kun tyylisivut ovat käytössä.-->
-        <title>Tehtävä 34</title> <!--otsikko-->
+        <!--<title>Tehtävä 34</title>--> <!--otsikko-->
     </head>
     <body>
         <!---<h1>Tehtävä 34</h1> -->
         <div class="container">
+            <div class="progress-container">
             <div class="progress" id="progreaa"></div>
-            <div class="circel">1</div>
+            <div class="circele active">1</div>
             <div class="circel">2</div>
             <div class="circel">3</div>
             <div class="circel">4</div>
         </div>
     
-        <button class="btn" id="edellinen" disabled>edellinen</button>
-        <button class="btn" id="seuraava">seuraava</button>
+        <button class="btn" id="prev" disabled>Prev</button>
+        <button class="btn" id="next">Next</button>
 
         <script src="script.js"></script> <!--Osoittaa ulkoista JavaScript-tiedostoa: eli tässä kohtaan script.js:ssää-->
     </body>
