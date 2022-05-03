@@ -5,8 +5,8 @@
 }
 
 body{
-    background-color: #f6f7f9;
-    font-family: 'Muli', sans-serif;
+    background-color: #f6f7f9; /*taustakuvan väri, numeroille*/
+    font-family: 'Muli', sans-serif; /*(siksi muutetaan tämäkin)muutettiin @ osoitetta ja tästä poistettiin Roboto:n tilalle Muli, tekstin asettelu tai siis tyyli*/
     margin: 0;
     display:flex;
     flex-direction: column;
@@ -17,66 +17,88 @@ body{
 }
 
 .container{
-    text-align:center;
+    text-align:center;/*Muuttaa numeroiden paikan edellisen ja seuraavan näppäimen keskelle*/
 }
 
 .progress-container{
-    display:flex;
-    max-width:100%;
-    width:350px;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    position:relative;
+    display:flex;/*Muuttaa numerot pystysuorasta vaaka suoraan, vasemmalta oikealle*/
+    max-width:100%;/*Nyt asetetaan max-leveys*/
+    width:350px; /*Numerot siirtyy vasemmalle näytöllä, tiiviisti yhdessä*/
+    justify-content: space-between; /*justify-content ominaisuus määrittää, kuinka selain jakaa tilaa sisältökohteiden välille ja
+    ympärille joustavan säilön pääakselilla ja ruudukkosäilön sisäisellä akselilla .Eli jakaa nunumeroille välit ja asettaa ne space-between tyyliin */
+    margin-bottom: 30px;/*asettaa numerot korkeamalle(Marginaaliominaisuuksien negatiiviset arvot ovat sallittuja, mutta toteutuskohtaisia rajoituksia voi olla.)*/
+    position:relative;/*postion: ominaisuus määrittää, kuinka elementti sijoitetaan dokumenttiin. Ylä-, oikea-, ala- ja vasen ominaisuudet määrittävät sijoitettujen
+    elementtien lopullisen sijainnin ja tämä on sijantiarvo:relative*/
 }
 
-.progress-container::before{
-    content: '';
-    background-color: #e0e0e0;
+.progress-container::before{/*Kopioidu .progress ja lisätty- container::before*/
+    content: '';/*Määrittää, mitä tietyn elementin sivupohjaista esiintymää laskuri- tai merkkijonoarvoon sovelletaan.*/
+    background-color: #e0e0e0;/*Muutettiin väri*/
     position:absolute;
     top:50%;
     left:0;
     transform: translateY(-50%);
     height: 4px;
-    width:100%;
+    width:100%;/*Muutettiin 0:sta 100:seen niin ilmestyi harmaa viiva numeroiden taakse*/
     z-index: -1;
     transition: 0.4s ease;
 }
 
 .progress{
-    background-color: #3498db;
-    position: absolute;
-    top:50%;
-    left:0;
-    transform: translateY(-50%);
-    height:4px;
-    width:0%;/*Tällä saa viivan näkyviin numeroiden välissä*/
-    z-index: -1;
-    transition: 0.4s ease;
+    background-color: #3498db;/*Tällä annetaan numeroiden taaks taustavärin*/
+    position: absolute;/*Elementit sijoitetaan sitten käyttämällä ylä-, ala-,
+    vasen- ja oikeaa ominaisuutta. Nämä ominaisuudet eivät kuitenkaan toimi, ellei ominaisuutta ole määritetty ensin. Ne 
+    toimivat myös eri tavalla sijaintiarvosta riippuen.position*/
+    top:50%;/*Määrittää, kuinka pitkälle absoluuttisesti sijoitetun laatikon ylämarginaali on siirtynyt laatikon 
+    "sisältävän lohkon" yläreunan alapuolelle.*/
+    left:0;/*vasen*/
+    transform: translateY(-50%);/*Tämä siirtää viivan numeron taakse eli Kaksiulotteinen muunnos sovelletaan 
+    elementtiin "transform"-ominaisuuden kautta. Tämä ominaisuus sisältää luettelon muunnosfunktioista, jotka ovat samankaltaisia kuin SVG:n sallimat toiminnot.*/
+    height:4px;/*Määrittää tiettyjen ruutujen sisältöalueen, täytealueen tai reuna-alueen leveyden (riippuen laatikon koosta).*/
+    width:0%;/*Tällä saa viivan näkyviin numeroiden välissä, niinkuin kuumemittarissa elohopee nousee*/
+    z-index: -1;/*sininen viiva jää numeroiden taakse*/
+    transition: 0.4s ease;/*Shorthand-ominaisuus yhdistää neljä siirtymäominaisuutta yhdeksi ominaisuudeksi.*/
 }
 
-.circle{
-    background-color: white;
-    height:30px;
-    width:30px;
-    border-radius: 50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border:3px solid #e0e0e0;
-    transition: 0.4s ease;;   
+.circle{/*Nyt teen numeroiden taakse taustan*/
+    background-color: white;/*taustaväri, ja harmaa viiva katkee siitä kohtaan.Numerot kun olisivat valkoisen laatikon sisällä*/
+    height:30px;/*Muokataan kokoa taustakuvalle*/
+    width:30px; /*Sama tämäkin muokkaa taustakuvan kokoa*/
+    border-radius: 50%;/*nyt alkaa numeroa asettamaan sen taustakuvan sisällä*/
+    display:flex;/*tavalla numero on vasemmalla yläreunassa*/
+    justify-content: center;/*Tällä keskität sen(Tasaa joustavat kohteet joustosäiliön nykyisen rivin pääakselille eli on harmaitten
+    viivojen keskellä)*/
+    align-items: center;/*Nyt on numero ihan keskellä*/
+    border:3px solid #e0e0e0;/*Nyt tulee numeroiden ympäriin reunat ja keskiosa on vaalea*/
+    transition: 0.4s ease; /*tämän: .circle.active{
+        border-color jälkeen vasta lisäsin transition jotta muillekkin numeroille tulisi ympyrä kehys(ovat harmaat
+        muilla numeroilla)*/   
 }
 
 .circle.active{
-    border-color:#3498db;
+    border-color:#3498db;/*Nyt annetaan numer 1:n ympyrälle väri*/
 }
 
-.btn{
-    font-family: inherit;
-    font-size:14px;
-    padding: 10px 30px;
+.btn{ /*Nyt muokataan edellistä ja seuraava nappia*/
+    font-family: inherit;/*Muutetaan tekstin sukua inherit:si*/
+    font-size:14px;/*Muutetaan tekstinkokoa*/
+    padding: 10px 30px;/*Muutetaan nelijön kokoa isommaksi*/
     background-color: #3498db;/*Next nappi muuttuu kokonaan siniseksi*/
     color:#fff;/*Next napin tekstin väri muuttuu valkoiseksi*/
     border:0;/*Tämä muuttaa Next napin reunat*/
     border-radius: 6px;/*Tämä muuttaa Next napin reunat pyöreäksi */
+    cursor:pointer;
+}
+
+.btn:active{/*Aletaan aktivoimaan edellinen ja seusaavaa nappia*/
+    transform:scale(0.98);/*Nyt nappi jo reagoi(vilkkuu kerran) kun klikkaa sitä*/
+}
+
+.btn:disabled{/*Jos tätä ei lisäisi niin kummatkin napit olisivat siniset*/
+    background-color: #e0e0ee;/*Edellinen nappi muuttuu harmaaksi*/
+    cursor:not-allowed;/*hiiri muuttu kieltomerkiksi jos koittaa painaa edellinen nappia*/
+}
+.btn:focus{
+    outline:0;
 }
 

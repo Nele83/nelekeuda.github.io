@@ -9,21 +9,22 @@
         <link rel="stylesheet" href="style.css" /> <!--Linkki ulkoiseen tyylisivuun. REL-attribuuttia käytetään määrittämään linkitetyn
              tiedoston ja HTML-dokumentin välinen suhde . REL=StyleSheet määrittää pysyvän tai ensisijaisen tyylin, kun taas REL="Alternate 
              StyleSheet" määrittää vaihtoehtoisen tyylin. Pysyvä tyyli on sellainen, jota käytetään aina, kun tyylisivut ovat käytössä.-->
-        <!--<title>Tehtävä 34</title>--> <!--otsikko-->
+    <title>Tehtävä 34</title>
     </head>
     <body>
-        <!---<h1>Tehtävä 34</h1> -->
+        <h1>Tehtävä 34. Nele Neuhof</h1>
         <div class="container"> <!--container=Säiliö/kontti vaikuttaa kaikkiin elementteihin " <div> </div>" -tunnisteiden välillä, joissa on class="container"-->
             <div class="progress-container"> <!-- progress=edistystä. Edistymiselementillä on oltava sekä aloitustunniste (eli <progressi>) että lopputunniste (eli </edistyminen> )-->
             <div class="progress" id="progress"></div> <!--CSS ja JavaScript käyttävät määritettä tietyn elementin tyyliin/valitsemiseen id-->
-            <div class="circle active">1</div>
-            <div class="circle">2</div>
-            <div class="circle">3</div>
+            <div class="circle active">1</div> <!--Piiri aktiivinen-->
+            <div class="circle">2</div> <!--kyseiset numerot-->
+            <div class="circle">3</div> <!--nämä numerot on ylhäältä alas hetkel-->
             <div class="circle">4</div>
         </div>
     
-        <button class="btn" id="prev" disabled>Prev</button> <!--Edellinen-->
-        <button class="btn" id="next">Next</button> <!--Seuraava-->
+        <button class="btn" id="prev" disabled>Prev</button> <!--Edellinen nappi-->
+        <button class="btn" id="next">Next</button> <!--Seuraava nappi, tulevat numeron alle, mutta eivat numeroiden keskelle, tyyliä pitää 
+        muuttaa style.css:ssä-->
 
         <script src="script.js"></script> <!--Osoittaa ulkoista JavaScript-tiedostoa: eli tässä kohtaan script.js:ssää-->
     </body>
