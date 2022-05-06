@@ -3,17 +3,7 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: #f6f7f9; /*taustakuvan väri, numeroille*/
-    font-family: 'Muli', sans-serif; /*(siksi muutetaan tämäkin)muutettiin @ osoitetta ja tästä poistettiin Roboto:n tilalle Muli, tekstin asettelu tai siis tyyli*/
-    margin: 0;
-    display:flex;
-    flex-direction: column;
-    align-items: center; /*Tällä siirän index.html body h1 tekstit näytön keskelle yläriville */
-    justify-content: center; /* Tällä siirän index.html body h1 tekstin keskelle näyttöä ja min-heightillä*/
-    min-height: 100vh; /*Alan anettamaan mihin kohtaan tarkalleen haluan */
-    overflow:hidden;
-}
+
 
 .container{
     text-align:center;/*Muuttaa numeroiden paikan edellisen ja seuraavan näppäimen keskelle*/
@@ -106,6 +96,17 @@ html {
 }
 
 body {
+   
+    background-color: #f6f7f9; /*taustakuvan väri, numeroille*/
+    font-family: 'Muli', sans-serif; /*(siksi muutetaan tämäkin)muutettiin @ osoitetta ja tästä poistettiin Roboto:n tilalle Muli, tekstin asettelu tai siis tyyli*/
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center; /*Tällä siirän index.html body h1 tekstit näytön keskelle yläriville */
+    justify-content: center; /* Tällä siirän index.html body h1 tekstin keskelle näyttöä ja min-heightillä*/
+    min-height: 100vh; /*Alan anettamaan mihin kohtaan tarkalleen haluan */
+    overflow:hidden;
+
     word-break: break-word; 
     color: #000;
     font-style: normal;
