@@ -4,7 +4,7 @@
 }
 body {
    
-    background-color: #f6f7f9; /*taustakuvan väri, numeroille*/
+    background-color: #000; /*taustakuvan väri, numeroille*/
     font-family: 'Muli', sans-serif; /*(siksi muutetaan tämäkin)muutettiin @ osoitetta ja tästä poistettiin Roboto:n tilalle Muli, tekstin asettelu tai siis tyyli*/
     margin: 0;
     display:flex;
