@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!--needs testing on mobile-->
+      <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Titillium+Web:wght@200;300;600;700&display=swap" rel="stylesheet"> 
+      <link rel="stylesheet" href="style.css">
+      <title>Ammatinvalintatesti</title>
+    </head>
+
+  <body>
+    <!--<background>
+      <img src="kuvat/tausta.png" alt ="tausta"></background  ei ihan niin mitä aattelin >-->
+
+    <header>
+      <div class="logo">
+        <a><img id="logo-img" src="kuvat/Logo.png" alt="logo"></a>
+        <h5><a class="green-text" href="https://www.keuda.fi" target="_blank"> Suosikki 💚 </a></h5> <!--/*style:ssä loin .green-text:n jotta sain sen muutettuaa Suosikki tekstin vihreäksi*/-->
+      </div>
+    </header>
+      <div class="container">
+        <div><h2><b>Ammatinvalintatesti</b></h2>
+          <div><img src= "kuvat/piqsels.com-id-zbfon.jpg" alt="background-picture" class="backpic"/>
+            <div class="description-block">
+              <div id="description">
+               <h3 class="description-color">Löydä opiskeluala</h3>
+               <p>Tee Keudan ammatinvalintatesti, niin näet mikä koulutusala voisi sopia sinulle mahdollisesti parhaiten.</p>
+               <p>Muistathan, että ammatinvalintatestin antamat tulokset ovat suuntaa-antavia. <br> Onnea koulutuksesi löytämiseen! </p><br>
+                 <div><button id="startbutton" class="begin" onclick="start()">Aloita testi </button></div>
+               <br>
+              </div>
+              <div id="question-base">
+                <script>
+                  const hideDescription = document.getElementById("description");
+                  const toggle = document.getElementById("startbutton");
+                  const showNext = document.getElementById("question-base");
+                  toggle.onclick = function () {
+                  if (hideDescription.style.display !== "none") {
+                  hideDescription.style.display = "none";
+                  showNext.style.display = "block"
+                    } 
+                  };
+                </script>
+                <span id="tohide"><p class="question">Kysymykset menevät tähän / Questions go here</p>
+                  <label id="option1" class="answer"><img src="kuvat/kylla.png" alt="kyllä kuva"></label>
+                  <label id="option2" class="answer"><img src="kuvat/ei.png" alt="ei kuva"></label></span>
+                </div>
+                
+                
+                <div id="showResult" class="resultArea"></div> <!--Tulos menee tähän script.js:tä-->
+                
+            </div></div></div></div>
+    <script src="./script.js" ></script>
+  </body>
+</html>
