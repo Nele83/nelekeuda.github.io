@@ -1,31 +1,36 @@
-//creating the list of questions that will be asked from a user
-const askthis = [ //KYSYMYKSET = GOOGLE-TRANSLATE !
-  {question: '1: Tykkäätkö oppia uusia asioita?',},
+//luettelon kysymykset, jotka käyttäjältä kysytään
+const askthis = [ 
+  {question: '1: Innostutko helposti uusista asioista?',},
   {question: '2: Tykkäätkö tehdä tehtäviä itsenäisesti?',},
-  {question: '3: Onko sinulla mahdollisuutta saada motivaatiota pysyä hyvässä fyysisessä kunnossa?',},
-  {question: '4: Pidätkö asioiden pitämisestä järjestyksessä?',},
-  {question: '5: Voitko kuvailla itseäsi luovaksi?',},
-  {question: '6: Pidätkö ihmisten kanssa vuorovaikutuksesta?',},
-  {question: '7: Kuulostaako tiimityö sinusta hyvältä?',},
-  {question: '8: Onko stressinhallintasi tarpeeksi hyvä?',},
-  {question: '9: Olisitko kiinnostunut olemaan vuorovaikutuksessa asiakkaiden kanssa eri kielellä?',},
+  {question: '3: Oletko liikunnallinen ja tykkäätkö tehdä fyysistä työtä?',},
+  {question: '4: Oletko oma-aloitteinen ja tykkäätkö tehdä vastuullista työtä?',},
+  {question: '5: Pysyykö käsissäsi kaikenlaiset työkalut ja tykkäätkö luovasta työstä?',},
+  {question: '6: Oletko puhelias?',},
+  {question: '7: Oletko positiivinen, helposti lähestyttävä, joka tykkää tiimityöskentelystä?',},
+  {question: '8: Siedätkö painetta?',},
+  {question: '9: Onko sinulla hyvät vuorovaikutustaidot ja tykkäätkö erilaisista kulttuureista?',},
 ]
-//creating variables
-const question = document.querySelector('.question'); //goes to 'question section' defined by HTML
-const SubmitYes = document.querySelector('#option1'); //accepts pressing the "yes" picture as an answer
-const SubmitNo = document.querySelector('#option2'); //accepts pressing the "no" pic
+//muuttujien luominen
+const question = document.querySelector('.question'); /*siirtyy HTML:n määrittelemään "kysymysosaan". (menetelmä) ParentNode.querySelector<Element>(valitsimet: merkkijono): Elementti (+2 ylikuormitusta)
+Palauttaa ensimmäisen elementin, joka on valitsimia vastaavan solmun jälkeläinen.*/
+const SubmitYes = document.querySelector('#option1'); //hyväksyy "kyllä"-kuvan painamisen vastauksena
+const SubmitNo = document.querySelector('#option2'); //hyväksyy "ei"-kuvan painamisen
+
 const answers = document.querySelectorAll('.answer'); 
-const result = document.querySelector('#showResult'); //to add the result area
-const hideQandA = document.getElementById("tohide"); //added to hide question and qnswers <span> after the test
-let points = 0; //simple logic to see if it works
-let count = 0; //questions count
-//creates a function that start asking questions
+
+const result = document.querySelector('#showResult'); //lisätäksesi tulosalueen
+const hideQandA = document.getElementById("tohide"); //lisätty piilottamaan kysymyksen ja qnswers <span> testin jälkeen
+
+let points = 0; //yksinkertainen logiikka nähdäksesi toimiiko se
+let count = 0; //kysymykset lasketaan
+
+//luo toiminnon, joka alkaa kysyä kysymyksiä
 const ask = () => {
  const questionList = askthis[count];
  question.innerText = questionList.question;
 }; 
 ask ();
-//user response check
+//käyttäjän vastausten tarkistus
 const checkAnswer = () => {
   let answer;
   answers.forEach(userResponse => {
@@ -63,36 +68,37 @@ SubmitYes.addEventListener('click', () => {
           ala = 'Person that doesn\'t like anything ? '; //add some ala  
           break;
         case 1:
-          ala = 'Maatalousala https://www.keuda.fi/koulutukset/maatalousalan-perustutkinto/';
+          ala = <p>"Käythän tutustumassa linkkiin" <a target= "_blank" href= "https://www.keuda.fi/koulutukset/maatalousalan-perustutkinto/"> Tässä on linkki www.keuda.fi </a>jota voit seurata </p>
           break;
         case 2: 
-          ala = 'Metsäala https://www.keuda.fi/koulutukset/metsaalan-perustutkinto/';
+          ala = <a href = "https://www.keuda.fi/koulutukset/metsaalan-perustutkinto/"target="_blank"> Metsäala </a>
           break;
         case 3:
-          ala = 'Turvallisuusala https://www.keuda.fi/koulutukset/turvallisuusalan-perustutkinto/';
+          ala = <a href = "https://www.keuda.fi/koulutukset/turvallisuusalan-perustutkinto/"target="_blank"> Turvallisuusala </a>
           break;
         case 4:
-          ala = 'Puhtaus-ja-kiinteistopalveluala https://www.keuda.fi/koulutukset/puhtaus-ja-kiinteistopalvelualan-perustutkinto/';
+          ala = <a href = "https://www.keuda.fi/koulutukset/puhtaus-ja-kiinteistopalvelualan-perustutkinto/"target="_blank"> Puhtaus-ja-kiinteistopalveluala </a>
           break;
         case 5: 
-          ala = 'Puutarha-ala https://www.keuda.fi/koulutukset/puutarha-alan-perustutkinto/';
+          ala = <a href = "https://www.keuda.fi/koulutukset/puutarha-alan-perustutkinto/"target="_blank"> Puutarha-ala </a>
           break;
         case 6:
-          ala = 'Kauneudenhoitoala https://www.keuda.fi/koulutukset/hius-ja-kauneudenhoitoalan-perustutkinto/';
+          ala = <a href =  "https://www.keuda.fi/koulutukset/hius-ja-kauneudenhoitoalan-perustutkinto/"target="_blank"> Kauneudenhoitoala </a>
           break;
         case 7: 
-          ala = 'Ravintola- ja catering ala https://www.keuda.fi/koulutukset/ravintola-ja-catering-alan-perustutkinto/';
+          ala = <a href =  "https://www.keuda.fi/koulutukset/ravintola-ja-catering-alan-perustutkinto/"target="_blank"> Ravintola- ja catering ala </a>
           break;
         case 8: 
-          ala = 'Logistikka https://www.keuda.fi/koulutukset/logistiikan-perustutkinto/';
+          ala = <a href = "https://www.keuda.fi/koulutukset/logistiikan-perustutkinto/"target="_blank"> Logistikka </a>
           break;
         case 9:
-          ala = 'Matkailuala https://www.keuda.fi/koulutukset/matkailualan-perustutkinto/';
+          ala = <a href = "https://www.keuda.fi/koulutukset/matkailualan-perustutkinto/"target="_blank"> Matkailuala </a>
           break;
         }
         result.classList.remove('resultArea'); 
         result.innerHTML = `<h4>${ala}</h4> 
         <button class="tryAgainButton" onclick='location.reload()'>Kokeile uudelleen</button>`;
+        <button class="tryAgainButton" onclick='location.reload()'>Testin tulos</button>;
     }
   }
 });
@@ -118,31 +124,31 @@ SubmitNo.addEventListener('click', () => {
             ala = 'Person that doesn\'t like anything ? '; //add some ala 
             break;
           case 1:
-            ala = 'Maatalousala https://www.keuda.fi/koulutukset/maatalousalan-perustutkinto/'
+            ala = <a href = "https://www.keuda.fi/koulutukset/maatalousalan-perustutkinto/"target="_blank"> Maatalousala </a>
             break;
           case 2: 
-            ala = 'Metsäala https://www.keuda.fi/koulutukset/metsaalan-perustutkinto/';
+            ala = <a href = "https://www.keuda.fi/koulutukset/metsaalan-perustutkinto/"target="_blank"> Metsäala </a>
             break;
           case 3:
-            ala = 'Turvallisuusala https://www.keuda.fi/koulutukset/turvallisuusalan-perustutkinto/';
+            ala = <a href = "https://www.keuda.fi/koulutukset/turvallisuusalan-perustutkinto/"target="_blank"> Turvallisuusala </a>
             break;
           case 4:
-            ala = 'Puhtaus-ja-kiinteistopalveluala https://www.keuda.fi/koulutukset/puhtaus-ja-kiinteistopalvelualan-perustutkinto/';
+            ala = <a href = "https://www.keuda.fi/koulutukset/puhtaus-ja-kiinteistopalvelualan-perustutkinto/"target="_blank"> Puhtaus-ja-kiinteistopalveluala </a>
             break;
           case 5: 
-            ala = 'Puutarha-ala https://www.keuda.fi/koulutukset/puutarha-alan-perustutkinto/';
+            ala = <a href = "https://www.keuda.fi/koulutukset/puutarha-alan-perustutkinto/"target="_blank"> Puutarha-ala </a>
             break;
           case 6:
-            ala = 'Kauneudenhoitoala https://www.keuda.fi/koulutukset/hius-ja-kauneudenhoitoalan-perustutkinto/';
+            ala = <a href =  "https://www.keuda.fi/koulutukset/hius-ja-kauneudenhoitoalan-perustutkinto/"target="_blank"> Kauneudenhoitoala </a>
             break;
           case 7: 
-            ala = 'Ravintola- ja catering ala https://www.keuda.fi/koulutukset/ravintola-ja-catering-alan-perustutkinto/';
+            ala = <a href =  "https://www.keuda.fi/koulutukset/ravintola-ja-catering-alan-perustutkinto/"target="_blank"> Ravintola- ja catering ala </a>
             break;
           case 8: 
-            ala = 'Logistikka https://www.keuda.fi/koulutukset/logistiikan-perustutkinto/';
+            ala = <a href = "https://www.keuda.fi/koulutukset/logistiikan-perustutkinto/"target="_blank"> Logistikka </a>
             break;
           case 9:
-            ala = 'Matkailuala https://www.keuda.fi/koulutukset/matkailualan-perustutkinto/';
+            ala = <a href = "https://www.keuda.fi/koulutukset/matkailualan-perustutkinto/"target="_blank"> Matkailuala </a>
             break;
           }
         result.classList.remove('resultArea'); 

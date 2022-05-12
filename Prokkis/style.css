@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background-color: sandybrown;/*taustaväri*/
+    /*background-color:peachpuff;/*taustaväri*/
     word-break: break-word; 
     color: #000;
     font-style: normal;
@@ -22,16 +22,18 @@ body {
 
 header {
     width: 80%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-    z-index: 1;
+    padding-right: 0;
+    padding-left: 1ch;
+    margin-right: auto; /*Shorthand-ominaisuus asettaa arvot marginaalialueen paksuudelle. Jos vasen jätetään pois, se on sama kuin oikea. Jos alaosa jätetään pois, se on sama kuin yläosa, jos oikea jätetään pois, se on sama kuin yläosa.*/
+    margin-left: auto; /*Syntaksi: <pituus> | <prosentti> | auto*/
+    position: relative; /*elementti sijoitetaan dokumenttiin. Ylä-, oikea-, ala- ja vasen ominaisuudet määrittävät sijoitettujen elementtien lopullisen sijainnin.*/
+    z-index: 1; /*Sijoitetulle laatikolle ominaisuus "z-index" määrittää laatikon pinotason nykyisessä pinoamiskontekstissa */
 }
 
 .green-text {/*Tällä sain Suosikki tekstin muutettuaa vihreäksi, indexsissä käytin sitten green-textiä*/
     color: #00801A;
+    font-size: 18px;
+    font-weight: bold;
   }
   
 #nav{
@@ -43,7 +45,7 @@ header {
 .container {
     width: 80%;
     padding-right: 15px;
-    padding-left: 50px;
+    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
@@ -54,11 +56,11 @@ header {
     width: 100%;
     display: block;
     margin: 0 auto;
-    margin-top: -20px;
+    margin-top: 20px;
 }
 
 h2 {
-
+    background-color: #ff9901;
     border-top: 2px solid #00801A;
     border-bottom: 2px solid #00801A;
     padding: 7px 5px 10px 3px;
@@ -80,7 +82,7 @@ h2 {
 }
 
 h3 {
-    color: #00801A;
+    color: black;
     font-size: 36px;
 }
 
@@ -124,6 +126,8 @@ h3 {
 }
 
 h4 {
+    
     font-weight: normal;
     font-size: 24px;
 }
+

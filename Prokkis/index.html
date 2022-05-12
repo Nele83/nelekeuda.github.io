@@ -8,6 +8,7 @@
       <title>Ammatinvalintatesti</title>
     </head>
 
+
 <style>/*Tällä siirän Suosikkia oikealle*/
   h5 {
     text-align: right;
@@ -28,6 +29,8 @@
 
     </header>
 
+    
+
         <div class="container"> 
           <div><h2>Ammatinvalintatesti</h2>
             <div><img src= "kuvat/piqsels.com-id-zbfon.jpg" alt="background-picture" class="backpic"/>
@@ -38,6 +41,7 @@
                 <p>Muistathan, että ammattivalintatestin antamat tulokset ovat suuntaa-antavia. <br> Onnea koulutuksesi löytämiseen! </p><br>
                 <div><button id="startbutton" class="begin" onclick="start()">Aloita testi</button></div>
                 <br>
+
               </div>
               <div id="question-base">
               <script>
@@ -54,8 +58,9 @@
                 <span id="tohide"><h3 class="question">Kysymykset menevät tähän / Questions go here</h3>
                   <label for="answer-positive" id="option1" class="answer"><img src="kuvat/kylla.png"></label>
                   <label for="answer-negative" id="option2" class="answer"><img src="kuvat/ei.png"></label>
+                  <button clas="tryAgainButton" onclick='location.reload()'>Testin tulos</button>;
                 </div></span>
-                <div id="showResult" class="resultArea"></div>
+                <div id="showResult" class="resultArea"></div>/*Näytä tulos tulos alue*/
 
             </div></div></div></div>
     <script type="text/javascript" language="javascript" src="./script.js" ></script>
