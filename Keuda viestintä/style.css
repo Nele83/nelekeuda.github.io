@@ -1,123 +1,137 @@
 html {
-    font-family: 'Titillium Web', sans-serif;
-    overflow-x: hidden;
+    font-family: 'Titillium Web', sans-serif; /*titillium web:stä haettiin href:iin*/
+    overflow-x: hidden;/*Overflow-x-ominaisuus määrittää, leikataanko sisältö, lisätäänkö vierityspalkki vai näytetäänkö lohkotason elementin 
+                         ylivuodon sisältö, kun se ylivuotetaan vasemmassa ja oikeassa reunassa hidden piilottaa. Hetkellä ei ole viel ollut käyttöä tälle.*/
 }
 
 body {
-    /*background-color: sandybrown;*/
-    word-break: break-word; 
-    color: #000;
-    font-style: normal;
-    font-size: 1rem;
-    line-height: 1.5;
+    /*background-color: sandybrown;   /*väri kyllä muuttu*/
+    /*background-image:url('kuva/tausta.png');   /*Ei toimi,*/
+    color: #000;/*keudan logon alla oleva otsikko Ammatinvalintatesie on väriltään musta*/
+    /*font-style: normal; /*Tekstin tyyli*/
+    font-size: 1rem; /*tekstin koko ja tekstin alla viiva, jännä rem*/
+    line-height: 1,5; /*Rivin korkeus bodyssä*/
     
 }
 
 .answer {
-    padding-right: 20px;
+    padding-right: 20px; /*Vastaus nappien(kuvien)väli*/
 }
 
-.answer:hover {
-    opacity: 50%;
+.answer:hover { /*Vastaus nappien stailaus*/
+    opacity: 20%;/*Ominaisuus opacity määrittää elementin peittävyystason, eli miten paljon kyllä nappi himmenee kun hiiri osuu sen päälle.*/
 }
 
-header {
-    width: 80%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-    z-index: 1;
+header { /*Pää*/
+    /*background-image: url('kuvat/tausta.jpg'); /*muuten ihan jees, mut kuva ei toimi logon takana*/
+    /*width: 80%; /*Jotta logo ja suosikki olisivat samassa sarakkeessa niinsanotusti ammatinvalintatestinkaa*/
+    /*padding-right: 15px;
+    padding-left: 15px;*/
+    width: 80%;/*Pitää logoa ja linkkia tuossa kohdassa 100% jos on alkavat vasemmalta*/
+    margin-right: auto;/*Pitää niinsanotusti keskellä,jos ei olisi olisi oikealla puolella*/
+    margin-left: auto;/*Jos ei olisi olisi vasemmalla puolella*/
+    position: relative;/*Pitää Löydä opiskeluala kohtaa siinä kohdassa*/
+    /*z-index: -1;*//* Jos olisi kuva minkä päälle haluaa jättää tekstin näkyviin,eli sijoittaa kvan tekstin taakse,meillä taas on poksi tehty kuvan
+                        päälle, siksi eimme tarvitse tätä*/
 }
 
-.container {
-    width: 80%;
-    padding-right: 15px;
-    padding-left: 50px;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-    z-index: 1;
+.container { /*Sisältää ammatinvalintatestistä alaspäin alueen,eli ovat kontissa*/
+    width: 80%;/*Pitää logon alla olevaa tekstiä myös siinä kohdassa kun on,sama ku headerissa.*/
+    /*padding-right: 15px;
+    padding-left: 50px;*/
+    margin-right: auto; /*Pitää niinsanotusti keskellä,jos ei olisi olisi oikealla puolella*/
+    margin-left: auto; /*Jos ei olisi olisi vasemmalla puolella*/
+    position: relative;/*Pitää Löydä opiskeluala kohtaa siinä kohdassa*/
+    /*z-index: 1;  Eli monetena on pinossa, niinkuin hamppari*/
+}
+/*.backpic1{ 
+    background-image: url('kuvat/tausta.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}  Ei toimi*/
+
+.backpic { /*kontin sisällä saniaiskuva*/
+    width: 100%;/*Saniais kuvan koko*/
+    /*display: blox; /*block; tämäkin toimisi (Näyttölohko)*/
+    /*margin:0 auto; on jo asetettu .container kohdassa, mutta jos haluaa alkaa leikkii kuvalla sillon juu*/
+    margin-top: -20px; /*Saniais kuvan koko mihin asti ylettyy ylöspäin  */
 }
 
-.backpic {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    margin-top: -20px;
+h2 { /*Ammatinvalintatesti kohta*/
+    border-top: 2px solid #00801A;/*Ammatinvalintatestistä ylä viivä*/
+    border-bottom: 2px solid #00801A;/*Ammatinvalintatestistä ala viivä*/
+    padding: 7px 5px 10px 3px; /*Täyte luo ylimääräistä tilaa elementin sisään, kun taas marginaali lisää tilaa elementin ympärille. yläpehmusta
+                                 oikea täyte, alaosan pehmuste ja vasen täyte 3px*/
+    font-weight: bold; /*On lihavoitu teksti*/
 }
 
-h2 {
-
-    border-top: 2px solid #00801A;
-    border-bottom: 2px solid #00801A;
-    padding: 7px 5px 10px 3px;
-    font-weight: normal;
+.description-block {/*"Löydä opiskeluala:"n boksi tai sinneppäin*/
+    position: absolute; /*esim: fixed; pysäyttäisi tämän boksin ja muu teksti liikuisi kun rullaa ylös alas, absolute asettaa boksin kuvan 
+                         päälle paikoille ja yläosaan*/
+    /*background-image: url('kuvat/tausta.jpg'); Ei toimi oikein*/                    
+    z-index: 1;/*Jotta tää boksi olisi kuvan päällä ja tänä display: none; piilottaisi sen jos haluaisi just toimia toisin päin*/
+    /*margin: 0 auto; määritetty jo .container:ssa */
+    text-align: center;/*Teksti keskitetty*/
+    top: 20%; /*ylös alas siirtely, px:nä olisi 150px*/
+    background:#fff; /*boksin sisällä taustaväri*/
+    color: #000;/*Tee Keud..teksti väri musta*/
+    width: 50%; /*Poikittain boksin koon,miten pitkäksi haluat */
+    border-top: 2px solid #00801A;/*boksin yläreuna vihreä viiva*/
+    border-bottom: 3px solid #00801A;/*boksin ala viiva*/
+    font-size: 18px; /*Tee keud...tekstin koko*/
+    font-weight: bold;/*Lihavoitu teksti*/
+    
 }
 
-.description-block {
-    position: absolute;
-    z-index: 2;
-    margin: 0 auto;
-    text-align: center;
-    top: 20%; /* up-down */
-    background: #fff;
-    color: #000;
-    width: 45%; 
-    border-top: 3px solid #00801A;
-    border-bottom: 3px solid #00801A;
-    font-size: 18px;
+h3 { /*On: <h3 class="description-color">Löydä opiskeluala</h3>*/
+    font-size: 36px; /*tekstin koko*/
 }
 
-h3 {
-    font-size: 36px;
+.description-color { /*Löydä opiskelualan teksti*/
+    color: #00801A; /*teksti vihreä*/
 }
 
-.description-color {
-    color: #00801A;
+.begin {/*tämä kohta<div><button id="startbutton" class="begin" onclick="start()">Aloita testi </button></div> indexsissä=Aloita testi nappi*/
+    /*font-family: 'Titillium Web', sans-serif; on jo ylhäällä luokiteltu noudattamaan kaikkialla.*/
+    background-color: #00801A;/*Aloita testi napin väri*/
+    width: 25%; /*Poikittain miten pitkäksi haluat aloita testin nappi*/
+    border: 5px; /*solid #00801A;/*Aloita testin nappulan koko ja solid #00801A; voi myös määrää värin*/
+    border-radius: 25px;/*Pyöristää aloitus napin reunat*/
+    font-weight: bold;/*Aloitus napin teksti lihavoitu*/
+    padding: 3px 3px;/*Aloitus napin koon muuttaminen*/
+    color: #fff;/* Aloita testin napin tekstin perus väri*/
+    font-size: 18px;/*Aloitus testin tekstin koko koko*/
+    letter-spacing: 0,5px;/*Muuttaa aloitus nappia pikkasen*/
+    /*margin-bottom: 12px;*/
+    /*cursor: pointer;*/
 }
 
-.begin {
+.tryAgainButton {/*Kokeile uudelleen nappi, sama kuin esim:Aloita testi napin säädöt osa on mukana vaikka eivät vaikuta mihinkään*/
     font-family: 'Titillium Web', sans-serif;
     background-color: #00801A;
     width: 25%;
     border: 1px solid #00801A;
-    border-radius: 25px;
+    border-radius: 25px;/*Pyöristää napin reunat*/
     font-weight: bold;
     padding: 3px 3px;
-    color: #fff;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    margin-bottom: 12px;
-    cursor: pointer;
-}
-
-.tryAgainButton {
-    font-family: 'Titillium Web', sans-serif;
-    background-color: #00801A;
-    width: 25%;
-    border: 1px solid #00801A;
-    border-radius: 25px;
-    font-weight: bold;
-    padding: 3px 3px;
-    color: #fff;
+    color:#fff;
     font-size: 18px;
     letter-spacing: 0.5px;
     margin-bottom: 38px;
-    margin-left: 50px;
-    cursor: pointer;
+    /*padding-right: 20px; /viimeisessä sivulla kokeile uudelleen tekstiä sais liikutettuaan napin sisällä*/
+    margin-left: 50px;/*tämä ajaa saman työn kun padding-right: 20px; */
+    cursor: pointer; /*Mahdollistaa kursorin ulkoasun hallinnan elementissä*/
 }
 
-.linkbutton {
+.linkbutton { /*lopussa oleva Lue nappi mikä ammatti tuli vastaukseksi, ja samoija stailauksia kuin muillakin */
     font-family: 'Titillium Web', sans-serif;
-    background-color: #fff;
-    min-width: 25%;
-    border: 1px solid #00801A;
-    border-radius: 25px;
-    font-weight: 700;
+    background-color: white;/*taustaväri*/
+    min-width: 35%; /*Koolta mini eli kapea poikittain oleva nappi*/
+    border: 3px solid orange;/*#00801A;*/ /*reunat ja teksti vihreenä ja reunan koko*/
+    border-radius: 25px; /*Pyöristää napin reunat*/
+    font-weight:bold; /*Eli miten hehkuu tai näkuu napin sisällä oleva teksti voit sen vaikka säätää 700:si*/
     padding: 3px 10px 3px 10px;
-    color: #00801A;
+    color: #00801A; /*Napin teksti väri*/
     
     font-size: 18px;
     letter-spacing: 0.5px;
@@ -125,49 +139,56 @@ h3 {
     cursor: pointer;
 }
 
-.begin:hover, .tryAgainButton:hover, .linkbutton:hover {
-    opacity: 80%;
-   color: orange; /*Aloita teksti muuttuu, mutta ei lähde käyntiin,nyt toimii*/
+.begin:hover, .tryAgainButton:hover, .linkbutton:hover { /*Aloitus nappi ja testin lopussa olevat nappien stailaus*/
+   opacity: 60%; /*Ominaisuus opacity määrittää elementin peittävyystason, eli miten paljon Aloita testi nappi himmenee kun hiiri osuu sen 
+                 päälle.*/
+   color: orange; /*Aloita teksti muuttaa väriä kun meet hiirellä sen päälle taikka klikkaat. Muuten pysyy valkoisena,kuten .begin:ssä 
+                       määritit siellä värin*/
 }
 
-#question-base {
-    display: none;
-    margin-bottom: 35px;
+#question-base { /*Tämä kohta: <div id="question-base">  indexsissä*/
+    display: none;/*Ilman tätä näkymätöntä kohtaa jäisivät kysymys 1/9 näkyviin "Löydä opiskelualan boksiin" */
+    margin-bottom: 35px;/*kysymysten ja kylla,ei kuvien alapuolen väli*/
 }
 
-h4 {
+h4 {/*Kun on vastattu kysymyksiin senjälkeinen teksti mikä tulee näkyviin stailaus vaikka*/
     font-weight: normal;
     font-size: 24px;
+    /*color: #00801A;*/
 }
 
-.question {
-    padding: 0px 5px;
-    font-weight: normal;
-    font-size: 26px;
-    font-weight: 500;
+.question {/*Kysymysten stailaus*/
+    /*padding: 0px 5px;*/
+    /*text-align:center;*/
+    font-weight: normal;/*teksti on normaali*/
+    font-size: 26px;/*tekstin koko*/
+    /*font-weight: 500;*/
       
 }
 
-.orange-text{ /*Luotu jotta nappulan teksti saa muutettuu oranssiksi*/
-    color: #ff9901;
+/*.orange-text{ /*Luotu jotta nappulan teksti saa muutettuu oranssiksi*/
+    /*color: #ff9901;/* Aluksi tein näin, vaikka riittääkin lisätä tähän kohtaan: .begin:hover, .tryAgainButton:hover, .linkbutton:hover
     
-}
-.green-text {/*Tällä sain Suosikki tekstin muutettuaa vihreäksi, indexsissä käytin sitten green-textiä*/
+} */
+.green-text {   /*Tällä sain Suosikki tekstin muutettuaa vihreäksi, indexsissä käytin sitten green-textiä*/
     color: #00801A;
-    font-size: 18px;
-    font-weight: bold;
+    /*text-align: right; ei riitä tässä kohtaan siirtää tekstiä oikealle, loin h5{erikseen}*/
+    font-size: 18px; /*Suosikkinapin suuruus*/
+    /*font-weight: bold;*/
+    
   }
 
-#nav{
-    font-weight: bold;
-    font-size: 18px;
-}
+ /*#nav{ ei tarvinutkaan suosikki napille tätä
+    /*font-weight: bold; /*lihavoitu teksti*/
+    /*font-size: 20px; /*tekstin koko*/
+   
+/*}*/
 
-h5 {
+h5 {/*Tässä sain sen sitten siirettyään oikealle*/
     text-align: right;
   }
 
-#showResult {
+#showResult { /*tämä kohta <div id="showResult" class="resultArea"></div> indeksissä*/
     padding: 0px 5px;
     /*color: darkorange;*/
 }
