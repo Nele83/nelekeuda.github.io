@@ -36,27 +36,28 @@
                  <div><button id="startbutton" class="begin" onclick="start()">Aloita testi </button></div>
                <br>
               </div>
-              <div id="question-base">
+              <div id="question-base"> <!--Kysymysten pohja-->
                 <script>
-                  const hideDescription = document.getElementById("description");
-                  const toggle = document.getElementById("startbutton");
-                  const showNext = document.getElementById("question-base");
-                  toggle.onclick = function () {
-                  if (hideDescription.style.display !== "none") {
-                  hideDescription.style.display = "none";
-                  showNext.style.display = "block"
+                  const hideDescription = document.getElementById("description"); /*Muuttujat aloita testi muuttu näkymättömäksi klikkaukksesta+ koko alue*/
+                  const toggle = document.getElementById("startbutton"); /*Muuttujat aloitusnappi*/
+                  const showNext = document.getElementById("question-base"); /*Muuttujat kutsuu kysymykset, */
+                  toggle.onclick = function () { /*Funktion esittely*/
+                  if (hideDescription.style.display !== "none") {  /*Jos ei ole hideDescription.style.display !== eli ei eole none*/
+                  hideDescription.style.display = "none"; /*Tee hideDescription.style.display = none") (eli tee alue näkymättömäksi) */
+                  showNext.style.display = "block" /*Näytä/tuo seuraava alue, eli kysymysten kanssa, tavalla näkyviin. eli sivun vaihto*/
                     } 
                   };
                 </script>
                 <span id="tohide"><p class="question">Kysymykset menevät tähän / Questions go here</p>
-                  <label id="option1" class="answer"><img src="kuvat/kylla.png" alt="kyllä kuva"></label>
-                  <label id="option2" class="answer"><img src="kuvat/ei.png" alt="ei kuva"></label></span>
+                  <label id="option1" class="answer"><img src="kuvat/kylla.png" alt="kyllä kuva"></label> <!--Kyllä klikkaus kuvake-->
+                  <label id="option2" class="answer"><img src="kuvat/ei.png" alt="ei kuva"></label></span> <!--Ei klikkaus kuvake-->
                 </div>
                 
                 
                 <div id="showResult" class="resultArea"></div> <!--Tulos menee tähän script.js:tä-->
                 
             </div></div></div></div>
-    <script src="./script.js" ></script>
+    <script src="./script.js" ></script> <!--Jos ei ole tätä kohtaa niin index ei toimi. Sama idea kuin tämä=<link rel="stylesheet" href="style.css"> -->
   </body>
+  Sibeliuksenväylä 55 A <br>04400 Järvenpää<br>Vaihde 09 273 81<br>Faksi 09 2711 426<br>info@keuda.fi 
 </html>
