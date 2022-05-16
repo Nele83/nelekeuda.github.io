@@ -176,6 +176,7 @@ h4 {/*Kun on vastattu kysymyksiin senjälkeinen teksti mikä tulee näkyviin sta
     /*text-align: right; ei riitä tässä kohtaan siirtää tekstiä oikealle, loin h5{erikseen}*/
     font-size: 18px; /*Suosikkinapin suuruus*/
     /*font-weight: bold;*/
+    text-decoration: none; //Piilottaa viivan suosikki tekstin alta
     
   }
 
