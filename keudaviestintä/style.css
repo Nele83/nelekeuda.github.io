@@ -19,7 +19,7 @@ body {
 }
 
 .answer:hover { /*Vastaus nappien stailaus*/
-    opacity: 20%;/*Ominaisuus opacity määrittää elementin peittävyystason, eli miten paljon kyllä nappi himmenee kun hiiri osuu sen päälle.*/
+    opacity: 50%;/*Ominaisuus opacity määrittää elementin peittävyystason, eli miten paljon kyllä nappi himmenee kun hiiri osuu sen päälle.*/
 }
 
 header { /*Pää*/
@@ -37,8 +37,8 @@ header { /*Pää*/
 
 .container { /*Sisältää ammatinvalintatestistä alaspäin alueen,eli ovat kontissa*/
     width: 80%;/*Pitää logon alla olevaa tekstiä myös siinä kohdassa kun on,sama ku headerissa.*/
-    /*padding-right: 15px;
-    padding-left: 50px;*/
+    padding-right: 15px;
+    padding-left: 50px;
     margin-right: auto; /*Pitää niinsanotusti keskellä,jos ei olisi olisi oikealla puolella*/
     margin-left: auto; /*Jos ei olisi olisi vasemmalla puolella*/
     position: relative;/*Pitää Löydä opiskeluala kohtaa siinä kohdassa*/
@@ -62,7 +62,6 @@ h2 { /*Ammatinvalintatesti kohta*/
     border-bottom: 2px solid #00801A;/*Ammatinvalintatestistä ala viivä*/
     padding: 7px 5px 10px 3px; /*Täyte luo ylimääräistä tilaa elementin sisään, kun taas marginaali lisää tilaa elementin ympärille. yläpehmusta
                                  oikea täyte, alaosan pehmuste ja vasen täyte 3px*/
-    font-weight: bold; /*On lihavoitu teksti*/
 }
 
 .description-block {/*"Löydä opiskeluala:"n boksi tai sinneppäin*/
@@ -76,8 +75,8 @@ h2 { /*Ammatinvalintatesti kohta*/
     background:#fff; /*boksin sisällä taustaväri*/
     color: #000;/*Tee Keud..teksti väri musta*/
     width: 50%; /*Poikittain boksin koon,miten pitkäksi haluat */
-    border-top: 2px solid #00801A;/*boksin yläreuna vihreä viiva*/
-    border-bottom: 2px solid #00801A;/*boksin ala viiva*/
+    border-top: 3px solid #00801A;/*boksin yläreuna vihreä viiva*/
+    border-bottom: 3px solid #00801A;/*boksin ala viiva*/
     font-size: 18px; /*Tee keud...tekstin koko*/
     font-weight: bold;/*Lihavoitu teksti*/
     
@@ -129,7 +128,7 @@ h3 { /*On: <h3 class="description-color">Löydä opiskeluala</h3>*/
     font-family: 'Titillium Web', sans-serif;
     background-color: white;/*taustaväri*/
     min-width: 35%; /*Koolta mini eli kapea poikittain oleva nappi*/
-    border: 3px solid #00801A; /* orange;*/ /*reunat ja teksti vihreenä ja reunan koko*/
+    border: 2px solid #00801A; /* orange;*/ /*reunat ja teksti vihreenä ja reunan koko*/
     border-radius: 25px; /*Pyöristää napin reunat*/
     font-weight:bold; /*Eli miten hehkuu tai näkuu napin sisällä oleva teksti voit sen vaikka säätää 700:si*/
     padding: 3px 10px 3px 10px;
