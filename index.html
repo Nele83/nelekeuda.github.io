@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+      <meta charset="UTF-8" /> <!--meta charset="utf-8"> käskee selainta käyttämään utf-8-merkkikoodausta kääntäessään konekoodia ihmisen luettavaksi
+        tekstiksi ja päinvastoin selaimessa näytettäväksi -->
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!--vaatii testausta mobiililaitteella-->  <!--width tarkoittaa sivun oletuskokoa CSS-pikseleinä. Jos suinkin mahdollista
+        niin kannattaa käyttää arvoa device-width, joka on ympäristön todellinen koko eikä jotain kiinteää kokoa. initial-scale
+        asettaa sivun oletuszoomaustason Muita mahdollisia asetuksia ovat maximum-scale, minimum-scale ja user-scalable-->
+
+      <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Titillium+Web:wght@200;300;600;700&display=swap" rel="stylesheet"> <!--
+                     titillium web:stä haettiin href:iin rel=StyleSheet määrittää pysyvän tai ensisijaisen tyylin-->
+      <link rel="stylesheet" href="style.css">  <!--Linkki ulkoiseen tyylisivuun. REL-attribuuttia käytetään määrittämään linkitetyn tiedoston ja
+        HTML-dokumentin välinen suhde . REL=StyleSheet määrittää pysyvän tai ensisijaisen tyylin, kun taas
+        REL="Alternate StyleSheet" määrittää vaihtoehtoisen tyylin. Pysyvä tyyli on sellainen, jota käytetään 
+        aina, kun tyylisivut ovat käytössä.-->
+      <title>Ammatinvalintatesti</title> <!--otsikko logon alla-->
+    </head>
+
+  <body>
+    <header> <!--Yläosa otsikko sisältää logon ja linkin keudan pääsivulle-->
+      <div class="logo">
+        <a><img id="logo-img" src="kuvat/Logo.png" alt="logo"></a> <!--Logon lisääminen-->
+        <h5><a class="green-text" href="https://www.keuda.fi" target="_blank"> Suosikki 💚 </a></h5> <!--/*style:ssä loin .green-text:n jotta sain sen muutettuaa Suosikki tekstin vihreäksi*/-->
+      </div>
+    </header>
+      <div class="container">
+        <div><h2>Ammatinvalintatesti</h2> <!--<b> olisi kans saannu lihavoitu teksti-->
+          <div><img src= "kuvat/piqsels.com-id-zbfon.jpg" alt="background-picture" class="backpic"/>
+            <!--<img src="kuvat/tausta.png" alt ="tausta" class="backpic1">  Ei onnistu-->
+            <div class="description-block">
+              <div id="description">
+               <h3 class="description-color">Löydä opiskeluala</h3>
+               <!--<div> <img src="kuvat/tausta.jpg"/>  --> <!--Ei toimi oikein ,-->
+               <p>Tee Keudan ammatinvalintatesti, niin näet mikä koulutusala voisi sopia sinulle mahdollisesti parhaiten.</p>
+               <p>Muistathan, että ammatinvalintatestin antamat tulokset ovat suuntaa-antavia. <br> Onnea koulutuksesi löytämiseen! </p><br>
+                 <div><button id="startbutton" class="begin" onclick="start()">Aloita testi </button></div>
+               <br>
+              </div>
+              <div id="question-base"> <!--Kysymysten pohja-->
+                <script>
+                  const hideDescription = document.getElementById("description"); /*Muuttujat aloita testi muuttu näkymättömäksi klikkaukksesta+ koko alue*/
+                  const toggle = document.getElementById("startbutton"); /*Muuttujat aloitusnappi*/
+                  const showNext = document.getElementById("question-base"); /*Muuttujat kutsuu kysymykset, */
+                  toggle.onclick = function () { /*Funktion esittely*/
+                  if (hideDescription.style.display !== "none") {  /*Jos ei ole hideDescription.style.display !== eli ei eole none*/
+                  hideDescription.style.display = "none"; /*Tee hideDescription.style.display = none") (eli tee alue näkymättömäksi) */
+                  showNext.style.display = "block" /*Näytä/tuo seuraava alue, eli kysymysten kanssa, tavalla näkyviin. eli sivun vaihto*/
+                    } 
+                  };
+                </script>
+                <span id="tohide"><p class="question">Kysymykset menevät tähän / Questions go here</p>
+                  <label id="option1" class="answer"><img src="kuvat/kylla.png" alt="kyllä kuva"></label> <!--Kyllä klikkaus kuvake-->
+                  <label id="option2" class="answer"><img src="kuvat/ei.png" alt="ei kuva"></label></span> <!--Ei klikkaus kuvake-->
+                </div>
+                
+                
+                <div id="showResult" class="resultArea"></div> <!--Tulos menee tähän script.js:tä-->
+                
+            </div></div></div></div>
+    <script src="./script.js" ></script> <!--Jos ei ole tätä kohtaa niin index ei toimi. Sama idea kuin tämä=<link rel="stylesheet" href="style.css"> -->
+  </body>
+  Sibeliuksenväylä 55 A <br>04400 Järvenpää<br>Vaihde 09 273 81<br>Faksi 09 2711 426<br>info@keuda.fi 
+</html>
